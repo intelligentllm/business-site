@@ -6,13 +6,15 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 // --- PARTICLE CONFIGURATION CONSTANTS ---
-const PARTICLE_COUNT = 160; 
+const PARTICLE_COUNT = 200; 
 const PARTICLE_COLOR = "#ffffff";
-const PARTICLE_MAX_SIZE = 5; 
-const PARTICLE_OPACITY = 0.9; 
+// ADJUSTED: Decreased maximum size for regular particles
+const PARTICLE_MAX_SIZE = 2; 
+const PARTICLE_OPACITY = 1; 
 const REPULSE_DISTANCE = 150;
 const BUBBLE_DISTANCE = 180;
-const BUBBLE_SIZE = 60; 
+// ADJUSTED: Decreased multiplier for the bubble effect
+const BUBBLE_SIZE = 5; 
 const PARTICLE_CANVAS_ID = "hero-particles-bg";
 
 /**
@@ -247,7 +249,7 @@ export default function Hero() {
         <canvas id={PARTICLE_CANVAS_ID} className="absolute inset-0"></canvas>
         
         {/* 2. Dark Overlay for Readability and Aesthetic (z-5) */}
-        <div className="absolute inset-0 bg-black/5 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/5 "></div>
         
         {/* 3. Gradient Overlay to maintain the Indigo theme */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-indigo-900/15"></div>
