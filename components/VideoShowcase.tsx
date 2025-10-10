@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client"
 
 import { useState, useEffect, useRef } from "react"
@@ -17,6 +18,8 @@ const PARTICLE_CANVAS_ID = "video-particles-bg"; // Unique ID for this component
  * Custom Particle Class to manage position, size, and movement.
  */
 class Particle {
+    canvas: any;
+    ctx: any;
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');

@@ -24,6 +24,13 @@ const PARTICLE_CANVAS_ID = "contact-particles-bg"; // Unique ID for this compone
  * Custom Particle Class to manage position, size, and movement.
  */
 class Particle {
+    canvas: any;
+    ctx: any;
+    x:any;
+    y:any;
+    size:any
+    vx:any
+    vy:any
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
@@ -61,7 +68,7 @@ class Particle {
  * Main function to initialize and run the particle system on a canvas.
  */
 const initializeParticles = (canvasId) => {
-    const canvas = document.getElementById(canvasId);
+    const canvas:any = document.getElementById(canvasId);
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
