@@ -37,12 +37,12 @@ export default function Navbar() {
             >
               Features
             </Link>
-            <Link
+            {/* <Link
               href="#work"
               className="text-indigo-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
             >
               Work
-            </Link>
+            </Link> */}
             <Link
               href="#process"
               className="text-indigo-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
@@ -54,6 +54,12 @@ export default function Navbar() {
               className="text-indigo-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
             >
               Pricing
+            </Link>
+            <Link
+              href="#invest"
+              className="text-indigo-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
+            >
+              Invest
             </Link>
           </nav>
 
@@ -107,9 +113,9 @@ export default function Navbar() {
               >
                 Pricing
               </Link>
-              <button className="border border-white px-5 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors w-full mt-4">
+              <Link href="#contact" className="border border-white px-5 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors w-full mt-4">
                 Contact
-              </button>
+              </Link>
             </nav>
           </div>
         </motion.div>

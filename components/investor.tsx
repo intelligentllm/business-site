@@ -270,7 +270,7 @@ export default function Investor() {
 
   return (
     <section
-      id="investor-pitch"
+       id="invest"
       ref={sectionRef}
       className="py-16 sm:py-24 relative overflow-hidden font-inter min-h-screen flex items-center bg-black" 
     >
@@ -356,7 +356,7 @@ export default function Investor() {
         {/* CTA Button Block */}
         <div className="mt-16 text-center">
             <a 
-                href="#contact" 
+                href="mailto:intelligentllm1@gmail.com" 
                 className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.02] shadow-xl shadow-indigo-500/50"
             >
                 Schedule a Deep Dive Meeting

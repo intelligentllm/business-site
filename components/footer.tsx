@@ -13,14 +13,18 @@ export default function Footer() {
               <a href="#features" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Features
               </a>
-              <a href="#work" className="text-indigo-400 hover:text-white transition-colors text-sm">
-                Work
-              </a>
+      
               <a href="#process" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Process
               </a>
               <a href="#pricing" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Pricing
+              </a>
+              <a href="#invest" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Invest
+              </a>
+              <a href="#contact" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Contact
               </a>
             </nav>
             <div className="h-6 w-px bg-indigo-800 hidden md:block"></div>
@@ -52,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 pt-8 border-t border-indigo-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-indigo-400 text-sm mb-4 md:mb-0">© {new Date().getFullYear()} MONO. All rights reserved.</p>
+          <p className="text-indigo-400 text-sm mb-4 md:mb-0">© {new Date().getFullYear()} INTELLIGENT LLM. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="text-indigo-400 hover:text-white transition-colors text-sm">
               Privacy Policy
