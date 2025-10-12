@@ -121,7 +121,7 @@ export default function Features() {
             <div
               key={index}
             
-              className="border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 hover:border-white/50 hover:bg-white/10 transition-all duration-300 group rounded-sm"
+              className="border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group rounded-xl shadow-lg"
            
             >
               <div className="mb-6 text-white/80 group-hover:text-white transition-colors">

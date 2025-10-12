@@ -309,13 +309,13 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="border border-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center">
-                View Our Work
+              <a href="https://intelligentllm.ai/" target="_blank" className="border border-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center">
+                Explore 
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-              <button className="border border-indigo-800 px-8 py-3 text-sm uppercase tracking-widest text-indigo-400 hover:border-indigo-600 hover:text-white transition-colors">
+              </a>
+              {/* <button className="border border-indigo-800 px-8 py-3 text-sm uppercase tracking-widest text-indigo-400 hover:border-indigo-600 hover:text-white transition-colors">
                 About Us
-              </button>
+              </button> */}
             </motion.div>
           </div>
           {/* shape with professional animation sequence */}

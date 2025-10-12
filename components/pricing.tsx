@@ -5,49 +5,84 @@ import { motion } from "framer-motion"
 import { Check } from "lucide-react"
 
 export default function Pricing() {
+  // true for Annual, false for Monthly
   const [annual, setAnnual] = useState(true)
 
+  // NOTE: Prices are in cents to match your original component's structure (e.g., 1999 for $19.99)
+  // Monthly prices: Basic $19.99, Pro $49.99, Extreme $199.99
+  // Annual prices: Basic $199.99, Pro $499.99, Extreme $1999.99
   const plans = [
     {
       name: "Basic",
-      description: "For small projects and individuals",
-      price: annual ? 1900 : 199,
-      features: ["Minimalist design", "Responsive layout", "Basic animations", "1 revision round", "14-day delivery"],
-      cta: "Get Started",
-      popular: false,
-    },
-    {
-      name: "Standard",
-      description: "For growing businesses and brands",
-      price: annual ? 3900 : 399,
+      description: "Ideal for small teams and limited knowledge bases.",
+      price: annual ? 19999 : 1999, // $199.99 / $19.99
       features: [
-        "Everything in Basic",
-        "Custom brutalist design",
-        "Advanced animations",
-        "3 revision rounds",
-        "Content strategy",
-        "7-day delivery",
+        "Basic Chat Features",
+        "5 PDFs (up to 7 MB each)",
+        "1 Workspace Allowed",
+        "5 Members per Workspace",
+        "1 Workflow Automation",
       ],
       cta: "Get Started",
-      popular: true,
+      popular: false,
+      isEnterprise: false,
     },
     {
-      name: "Premium",
-      description: "For established companies and enterprises",
-      price: annual ? 7900 : 799,
+      name: "Pro",
+      description: "Best for growing teams needing more scale and features.",
+      price: annual ? 49999 : 4999, // $499.99 / $49.99
       features: [
-        "Everything in Standard",
-        "Comprehensive design system",
-        "Custom functionality",
-        "Unlimited revisions",
-        "SEO optimization",
-        "Priority support",
-        "5-day delivery",
+        "Unlimited Chat Features",
+        "50 PDF Knowledge Base",
+        "Up to 5 Workspaces",
+        "Up to 10 Members",
+        "Up to 5 Workflow Automations",
       ],
-      cta: "Contact Us",
+      cta: "Start 7-Day Trial",
+      popular: true, // Marked Pro as popular
+      isEnterprise: false,
+    },
+    {
+      name: "Extreme",
+      description: "For large organizations with extensive needs.",
+      price: annual ? 199999 : 19999, // $1999.99 / $199.99
+      features: [
+        "Unlimited Chat",
+        "Unlimited PDF Knowledge Base",
+        "Up to 50 Workspaces",
+        "100 Members Allowed",
+        "20 Workflow Automations",
+      ],
+      cta: "Request Demo",
       popular: false,
+      isEnterprise: false,
+    },
+    {
+      name: "Enterprise",
+      description: "Custom solutions, dedicated support, and SLA guarantees.",
+      price: null,
+      features: [
+        "Custom Feature Integration",
+        "Unlimited Scale & Capacity",
+        "Dedicated Account Manager",
+        "Custom Memberships & Roles",
+        "Advanced Security & Compliance",
+        "Priority 24/7 Support",
+      ],
+      cta: "Let's Discuss",
+      popular: false,
+      isEnterprise: true,
     },
   ]
+
+  // Calculate the annual saving percentage for the toggle display
+  // We'll base this on the Basic plan for a representative number: (19.99 * 12 - 199.99) / (19.99 * 12) * 100
+  // (239.88 - 199.99) / 239.88 * 100 ≈ 16.6%
+  const annualSavings = Math.round(((19.99 * 12) - 199.99) / (19.99 * 12) * 100);
+
+  // Helper function to format cents to dollars
+  const formatPrice = (priceInCents) => (priceInCents / 100).toFixed(2);
+
 
   return (
     <section id="pricing" className="py-24 relative overflow-hidden bg-gradient-to-b from-black to-indigo-900">
@@ -78,7 +113,7 @@ export default function Pricing() {
                 annual ? "bg-white text-black font-medium" : "text-white/70 hover:text-white"
               }`}
             >
-              Annual <span className="text-xs opacity-80">(Save 20%)</span>
+              Annual <span className="text-xs opacity-80">(Save {annualSavings}%)</span>
             </button>
             <button
               onClick={() => setAnnual(false)}
@@ -91,7 +126,8 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Updated grid for 4 columns on large screens (lg:grid-cols-4) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -106,10 +142,19 @@ export default function Pricing() {
               )}
               <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
               <p className="text-white/70 mb-6">{plan.description}</p>
+              
+              {/* Conditional rendering for price or 'Contact Us' */}
               <div className="mb-6 flex items-baseline">
-                <span className="text-4xl font-bold text-white">${plan.price}</span>
-                <span className="text-white/70 ml-2">{annual ? "/year" : "/month"}</span>
+                {plan.isEnterprise ? (
+                  <span className="text-4xl font-bold text-white">Custom</span>
+                ) : (
+                  <>
+                    <span className="text-4xl font-bold text-white">${formatPrice(plan.price)}</span>
+                    <span className="text-white/70 ml-2">{annual ? "/year" : "/month"}</span>
+                  </>
+                )}
               </div>
+              
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start group">
@@ -118,9 +163,10 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
+              
               <button
                 className={`w-full py-3 text-sm uppercase tracking-widest transition-all duration-300 ${
-                  plan.popular 
+                  plan.popular || plan.isEnterprise 
                     ? "bg-white text-black hover:bg-white/90" 
                     : "border-2 border-white/30 text-white hover:border-white hover:bg-white/10"
                 }`}

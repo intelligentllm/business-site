@@ -249,22 +249,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-indigo-600/20 p-3 rounded-lg mr-4 flex-shrink-0">
-                  <Phone className="w-6 h-6 text-indigo-400" />
-                </div>
-                <div>
-                  <div className="text-sm uppercase tracking-widest text-white/70 mb-1">
-                    Phone
-                  </div>
-                  <a
-                    href="tel:+1234567890"
-                    className="text-white text-lg hover:text-indigo-400 transition-colors font-medium"
-                  >
-                    +1 (234) 567-890
-                  </a>
-                </div>
-              </div>
+  
 
               <div className="flex items-start">
                 <div className="bg-indigo-600/20 p-3 rounded-lg mr-4 flex-shrink-0">
@@ -275,9 +260,7 @@ export default function Contact() {
                     Address
                   </div>
                   <address className="not-italic text-white text-lg font-medium">
-                    123 Minimalist Street
-                    <br />
-                    New York, NY 10001
+                    Chicago, IL, USA
                   </address>
                 </div>
               </div>

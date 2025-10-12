@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="text-2xl font-bold tracking-tighter">
-              INTELLIGENT <span className="text-indigo-400"> LLM</span>
+              INTELLIGENT<span className="text-indigo-400">LLM</span>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:items-center">

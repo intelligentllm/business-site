@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="w-full px-8 lg:px-24 xl:px-32">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-white font-bold text-2xl tracking-tighter">
-            INTELLIGENT<span className="text-indigo-400"> LLM</span>
+            INTELLIGENT<span className="text-indigo-400">LLM</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">

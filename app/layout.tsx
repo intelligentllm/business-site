@@ -8,7 +8,7 @@ import type { Metadata } from 'next'; // Import Metadata type
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = { // Add Metadata type
-  title: "INTELLIGENT LLM",
+  title: "INTELLIGENTLLM",
   generator: "JAY GAJJAR",
   // Add manifest and icons metadata
   manifest: "/site.webmanifest",
