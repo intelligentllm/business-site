@@ -29,8 +29,10 @@ class Particle {
         this.size = Math.random() * PARTICLE_MAX_SIZE + 0.5;
         
         // Velocity calculation for visible movement between -0.5 and 0.5 pixels/frame
-        this.vx = Math.random() * 1 - 0.5; 
-        this.vy = Math.random() * 1 - 0.5; 
+        // this.vx = Math.random() * 1 - 0.5; 
+        // this.vy = Math.random() * 1 - 0.5; 
+        this.vx = (Math.random() * 1 - 0.5) / 2; 
+        this.vy = (Math.random() * 1 - 0.5) / 2; 
     }
 
     draw() {

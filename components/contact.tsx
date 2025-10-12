@@ -12,12 +12,12 @@ import {
 } from "lucide-react";
 
 // --- PARTICLE CONFIGURATION CONSTANTS (Copied from VideoShowcase) ---
-const PARTICLE_COUNT = 160; 
-const PARTICLE_MAX_SIZE = 5; 
-const PARTICLE_OPACITY = 0.9; 
+const PARTICLE_COUNT = 200; 
+const PARTICLE_MAX_SIZE = 2; 
+const PARTICLE_OPACITY = 1; 
 const REPULSE_DISTANCE = 150;
 const BUBBLE_DISTANCE = 180;
-const BUBBLE_SIZE = 60; 
+const BUBBLE_SIZE = 5; 
 const PARTICLE_CANVAS_ID = "contact-particles-bg"; // Unique ID for this component's canvas
 
 /**
@@ -39,8 +39,8 @@ class Particle {
         this.size = Math.random() * PARTICLE_MAX_SIZE + 0.5;
         
         // Velocity calculation for visible movement between -0.5 and 0.5 pixels/frame
-        this.vx = Math.random() * 1 - 0.5; 
-        this.vy = Math.random() * 1 - 0.5; 
+      this.vx = (Math.random() * 1 - 0.5) / 2; // Slower speed
+        this.vy = (Math.random() * 1 - 0.5) / 2; // Slower speed
     }
 
     draw() {
@@ -194,7 +194,7 @@ export default function Contact() {
         <canvas id={PARTICLE_CANVAS_ID} className="absolute inset-0"></canvas>
         
         {/* 2. Dark Overlay for Readability and Aesthetic (z-5) */}
-        <div className="absolute inset-0 bg-black/5 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/5 "></div>
         
         {/* 3. Gradient Overlay to maintain the Indigo theme */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-indigo-900/15"></div>

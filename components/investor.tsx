@@ -7,14 +7,14 @@ import { DollarSign, Zap, Rocket, Users, Target } from "lucide-react";
 // Removed: import Particles from "@tsparticles/react"; (External dependency caused error)
 
 // --- CONFIGURATION CONSTANTS (Derived from user's JSON) ---
-const PARTICLE_COUNT = 160; // **UPDATED: Increased for higher density**
+const PARTICLE_COUNT = 200; // **UPDATED: Increased for higher density**
 const PARTICLE_COLOR = "#ffffff";
 const PARTICLE_MAX_SIZE = 3; // **UPDATED: Increased for better visibility**
 // Removed PARTICLE_SPEED_SCALE as it was ineffective for visible movement
 const PARTICLE_OPACITY = 0.9; 
 const REPULSE_DISTANCE = 150;
 const BUBBLE_DISTANCE = 180;
-const BUBBLE_SIZE = 60; // **UPDATED: Increased for stronger interaction**
+const BUBBLE_SIZE = 5; // **UPDATED: Increased for stronger interaction**
 
 /**
  * Custom Particle Class to manage position, size, and movement.
@@ -28,8 +28,9 @@ class Particle {
         this.size = Math.random() * PARTICLE_MAX_SIZE + 0.5;
         
         // FIXED MOVEMENT: Calculating velocity to guarantee visible movement between -0.5 and 0.5 pixels/frame
-        this.vx = Math.random() * 1 - 0.5; 
-        this.vy = Math.random() * 1 - 0.5; 
+
+                this.vx = (Math.random() * 1 - 0.5) / 4; 
+        this.vy = (Math.random() * 1 - 0.5) / 4; 
     }
 
     draw() {
@@ -293,7 +294,7 @@ export default function Investor() {
             
             {/* 2. Dark Overlay for Readability and Aesthetic (z-5) */}
             {/* Reduced opacity to bg-black/5 */}
-            <div className="absolute inset-0 bg-black/5 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-black/5"></div>
             {/* 3. Gradient Overlay to maintain the Indigo theme */}
             {/* Reduced gradient opacities to be much lighter */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-indigo-900/15"></div>
