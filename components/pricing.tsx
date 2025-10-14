@@ -76,8 +76,6 @@ export default function Pricing() {
   ]
 
   // Calculate the annual saving percentage for the toggle display
-  // We'll base this on the Basic plan for a representative number: (19.99 * 12 - 199.99) / (19.99 * 12) * 100
-  // (239.88 - 199.99) / 239.88 * 100 ≈ 16.6%
   const annualSavings = Math.round(((19.99 * 12) - 199.99) / (19.99 * 12) * 100);
 
   // Helper function to format cents to dollars
@@ -143,7 +141,7 @@ export default function Pricing() {
               <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
               <p className="text-white/70 mb-6">{plan.description}</p>
               
-              {/* Conditional rendering for price or 'Contact Us' */}
+              {/* Conditional rendering for price or 'Custom' */}
               <div className="mb-6 flex items-baseline">
                 {plan.isEnterprise ? (
                   <span className="text-4xl font-bold text-white">Custom</span>
@@ -164,15 +162,18 @@ export default function Pricing() {
                 ))}
               </ul>
               
-              <button
-                className={`w-full py-3 text-sm uppercase tracking-widest transition-all duration-300 ${
+              {/* --- MODIFIED: Changed <button> to <a> tag --- */}
+              <a
+                href={plan.isEnterprise ? "mailto:intelligentllm1@gmail.com" : "mailto:intelligentllm1@gmail.com"} // Example dynamic link target
+                className={`w-full py-3 text-sm uppercase tracking-widest transition-all duration-300 text-center inline-block ${
                   plan.popular || plan.isEnterprise 
                     ? "bg-white text-black hover:bg-white/90" 
                     : "border-2 border-white/30 text-white hover:border-white hover:bg-white/10"
                 }`}
               >
                 {plan.cta}
-              </button>
+              </a>
+              {/* ------------------------------------------- */}
               
               {/* Add subtle highlight for popular plan */}
               {plan.popular && (

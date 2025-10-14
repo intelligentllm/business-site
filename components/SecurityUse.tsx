@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Users, Briefcase, Building2, Lock, ShieldCheck } from "lucide-react"
+import { Users, Briefcase, Building2, Lock, ShieldCheck, Factory } from "lucide-react"
 import React from "react"
 
 // 1. Define the structure for the audience data using a TypeScript interface
@@ -30,6 +30,12 @@ export default function SecurityAndUse() {
       description:
         "Companies seeking to deploy a private, customized AI solution for employees without incurring significant overhead and complexity of building from scratch.",
       icon: Building2,
+    },
+    {
+      title: "Large Enterprise",
+      description:
+        "Global corporations requiring dedicated infrastructure, custom compliance features, single sign-on (SSO), and large-scale, fine-tuned model deployment for thousands of users.",
+      icon: Factory, // Using Factory icon for Enterprise
     },
   ]
 
@@ -96,7 +102,7 @@ export default function SecurityAndUse() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-4 gap-8"
           >
             {audiences.map((audience, index) => (
               <motion.div

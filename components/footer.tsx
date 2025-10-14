@@ -2,23 +2,49 @@ export default function Footer() {
   return (
     <footer className="py-7 pb-5 border-t border-indigo-800">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-start">
+          
+          {/* Company Name/Logo Section */}
+          <div className="mb-8 md:mb-0 md:w-1/4">
             <div className="text-2xl font-bold tracking-tighter">
               INTELLIGENT<span className="text-indigo-400">LLM</span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 md:items-center">
-            <nav className="flex gap-6">
+          
+          {/* Links Section - Organized into Two Columns on MD+ */}
+          <div className="flex flex-col md:flex-row  gap-12 lg:gap-24 md:w-1/2 md:justify-end">
+            
+            {/* Column 1: Product/Navigation Links */}
+            <nav className="flex flex-col gap-2">
+              <h4 className="text-white font-semibold mb-1">Product</h4>
               <a href="#features" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Features
               </a>
-      
               <a href="#process" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Process
               </a>
               <a href="#pricing" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Pricing
+              </a>
+              <a href="#api-platform" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Api Platform
+              </a>
+            </nav>
+            
+            {/* Column 2: Company/Legal Links */}
+            <nav className="flex flex-col gap-2">
+              <h4 className="text-white font-semibold mb-1">Company</h4>
+              <a href="#research" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Our research
+              </a>
+              <a href="#product-update" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Latest update
+              </a>
+              <a href="#safety" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                Safety
+              </a>
+              <a href="#company" className="text-indigo-400 hover:text-white transition-colors text-sm">
+                About Us
               </a>
               <a href="#invest" className="text-indigo-400 hover:text-white transition-colors text-sm">
                 Invest
@@ -27,9 +53,12 @@ export default function Footer() {
                 Contact
               </a>
             </nav>
-            <div className="h-6 w-px bg-indigo-800 hidden md:block"></div>
+          </div>
+          
+          {/* Social Media Icons Section */}
+          <div className="mt-8 md:mt-0 md:w-1/4 flex justify-end">
             <div className="flex gap-4">
-              <a href="#" className="text-indigo-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/intelligentllm?igsh=MTM5cWNyeGRpczBsaQ==" className="text-indigo-400 hover:text-white transition-colors" aria-label="Instagram">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
@@ -38,7 +67,7 @@ export default function Footer() {
                   />
                 </svg>
               </a>
-              <a href="#" className="text-indigo-400 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="https://www.linkedin.com/company/intelligentllm/" className="text-indigo-400 hover:text-white transition-colors" aria-label="Twitter">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
@@ -55,10 +84,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-6 pt-8 border-t border-indigo-800 flex flex-col md:flex-row justify-between items-center">
+
+        {/* --- Bottom Row: Copyright and Legal Links (Privacy, ToS) --- */}
+        <div className="mt-12 pt-6 border-t border-indigo-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-indigo-400 text-sm mb-4 md:mb-0">© {new Date().getFullYear()} INTELLIGENT LLM. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-indigo-400 hover:text-white transition-colors text-sm">
+            <a href="#privacy-policy-link" className="text-indigo-400 hover:text-white transition-colors text-sm">
               Privacy Policy
             </a>
             <a href="#" className="text-indigo-400 hover:text-white transition-colors text-sm">

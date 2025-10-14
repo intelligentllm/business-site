@@ -268,7 +268,7 @@ export default function Hero() {
               className="mb-6"
             >
               <div className="inline-block border border-indigo-800 px-3 py-1 text-xs uppercase tracking-widest text-indigo-400">
-                AI ECO SYSTEM
+                AI ECOSYSTEM
               </div>
             </motion.div>
             <h1>

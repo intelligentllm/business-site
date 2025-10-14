@@ -10,21 +10,15 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "The minimalist approach perfectly captured our brand essence. Their attention to detail and focus on typography made our digital presence stand out.",
-      author: "Sarah Johnson",
-      role: "Creative Director, Studio Black",
+        "The **Knowledge Base** feature is a game-changer; it provides immediate, accurate answers drawn directly from our documentation, significantly accelerating our development cycle.",
+      author: "JG Developer",
+      role: "Lead Engineer",
     },
     {
       quote:
-        "Working with this team was refreshing. They stripped away all the unnecessary elements and delivered a product that was both beautiful and functional.",
-      author: "Michael Chen",
-      role: "Founder, Monochrome",
-    },
-    {
-      quote:
-        "Their brutalist design philosophy challenged our conventional thinking and resulted in a website that truly captures attention and drives engagement.",
-      author: "Emily Rodriguez",
-      role: "Marketing Lead, Contrast Inc.",
+        "The ability to **fully automate our security workflows** has allowed our team to focus on strategic, high-priority tasks, eliminating unnecessary worry and boosting overall efficiency.",
+      author: "BRJU InfoSec",
+      role: "Security Analyst",
     },
   ]
 

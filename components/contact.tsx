@@ -271,21 +271,14 @@ export default function Contact() {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/intelligentllm?igsh=MTM5cWNyeGRpczBsaQ=="
                     className="bg-white/10 p-3 rounded-full hover:bg-indigo-600/40 transition-colors group border border-white/20"
                     aria-label="Follow us on Instagram"
                   >
                     <Instagram className="w-5 h-5 text-white/80 group-hover:text-indigo-400 transition-colors" />
                   </a>
                   <a
-                    href="#"
-                    className="bg-white/10 p-3 rounded-full hover:bg-indigo-600/40 transition-colors group border border-white/20"
-                    aria-label="Follow us on Twitter"
-                  >
-                    <Twitter className="w-5 h-5 text-white/80 group-hover:text-indigo-400 transition-colors" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.linkedin.com/company/intelligentllm/"
                     className="bg-white/10 p-3 rounded-full hover:bg-indigo-600/40 transition-colors group border border-white/20"
                     aria-label="Connect with us on LinkedIn"
                   >

@@ -3,7 +3,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Square, Circle, Triangle, Hexagon } from "lucide-react";
+import { Square, Circle, Triangle, Hexagon,BookLock , Lightbulb, Workflow, Users} from "lucide-react";
 
 export default function Features() {
   const sectionRef = useRef(null);
@@ -14,25 +14,25 @@ export default function Features() {
 
   const features = [
     {
-      icon: <Square className="w-6 h-6" />,
+      icon: <BookLock className="w-6 h-6" />,
       title: "Secure & Versatile",
       description:
         "A robust environment for creativity, in-depth research, and seamless collaboration.",
     },
     {
-      icon: <Circle className="w-6 h-6" />,
+      icon: <Lightbulb className="w-6 h-6" />,
       title: "Custom Knowledge Base",
       description:
         "Ground AI responses in your proprietary data for unprecedented accuracy and relevance.",
     },
     {
-      icon: <Triangle className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6" />,
       title: "Collaborative Workspaces",
       description:
         "Empower teams with shared AI interactions and knowledge co-creation.",
     },
     {
-      icon: <Hexagon className="w-6 h-6" />,
+      icon: <Workflow className="w-6 h-6" />,
       title: "Worflow Automation",
       description:
         "Transform your repetitive tasks into seamless, custom-built automated workflows.",
@@ -120,9 +120,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-            
-              className="border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 hover:border-indigo-400/50 hover:bg-white/10 transition-all duration-300 group rounded-xl shadow-lg"
-           
+              className="border-2 border-white/20 bg-white/5 backdrop-blur-sm p-8 hover:border-white-900 hover:bg-white/10 transition-all duration-300 group rounded-xl shadow-lg"
             >
               <div className="mb-6 text-white/80 group-hover:text-white transition-colors">
                 <div className="bg-white/10 p-3 inline-block rounded-sm group-hover:bg-white/20 transition-all duration-300">
