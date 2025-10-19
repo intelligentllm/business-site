@@ -271,7 +271,7 @@ export default function Contact() {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.instagram.com/intelligentllm?igsh=MTM5cWNyeGRpczBsaQ=="
+                    href="https://www.instagram.com/intelligentllm?igsh=MWt4NTJ3M2RvYzNhdw=="
                     className="bg-white/10 p-3 rounded-full hover:bg-indigo-600/40 transition-colors group border border-white/20"
                     aria-label="Follow us on Instagram"
                   >

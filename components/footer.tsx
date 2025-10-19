@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Social Media Icons Section */}
           <div className="mt-8 md:mt-0 md:w-1/4 flex justify-end">
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/intelligentllm?igsh=MTM5cWNyeGRpczBsaQ==" className="text-indigo-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/intelligentllm?igsh=MWt4NTJ3M2RvYzNhdw==" className="text-indigo-400 hover:text-white transition-colors" aria-label="Instagram">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
